@@ -1,11 +1,14 @@
 [project]
 name = "ticket_env"
 version = "0.1.0"
-description = "Ticket Environment for RL or simulation"
 dependencies = [
     "fastapi",
-    "uvicorn"
+    "uvicorn",
+    "openenv-core>=0.2.0"
 ]
 
+[project.scripts]
+server = "server.app:app"
+
 [tool.setuptools]
-packages = ["env", "tasks"]
+packages = ["env", "tasks", "server"]
