@@ -6,11 +6,16 @@ import uvicorn
 
 from fastapi import FastAPI
 
-app = FastAPI(
-    title="Ticket API",
-    docs_url="/docs",       # enable Swagger
-    redoc_url="/redoc"
-)
+import os
+
+app = FastAPI()
+
+# Fix for Hugging Face Spaces
+if "SPACE_ID" in os.environ:
+    app.root_path = ""
+
+
+
 env = TicketEnv()
 state = None
 
