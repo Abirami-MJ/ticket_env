@@ -1,0 +1,8 @@
+name: ticket_env
+
+entrypoint: env:TicketEnv
+
+tasks:
+  - tasks.easy
+  - tasks.medium
+  - tasks.hard
