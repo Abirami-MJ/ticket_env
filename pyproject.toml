@@ -1,0 +1,11 @@
+[project]
+name = "ticket_env"
+version = "0.1.0"
+description = "Ticket Environment for RL or simulation"
+dependencies = [
+    "fastapi",
+    "uvicorn"
+]
+
+[tool.setuptools]
+packages = ["env", "tasks"]
